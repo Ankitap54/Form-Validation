@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        html,body {
+            height: 100%;
+            width: 100%;
+            font-family: sans-serif;
+
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background: url('back.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: fixed;
+        }
+        .box{
+            height: 85vh;
+            width: 90vh;
+            background-color: rgba(236, 126, 36, 0.495);
+             margin: 7vh 30vh 30vh 60vh;
+             border-radius: 6vh;
+             box-shadow: 2px 2px 5px 5px  rgba(248, 242, 138, 0.737) ;
+             
+
+        }
+        .signup{
+           color: white;
+           padding-left: 32vh;
+           padding-top: 5vh;
+           font-size: 4vh;
+           
+
+        }
+
+        main{
+            padding: 3vh;
+            margin-top: 2vh;
+            /* line-height: 6vh; */
+            padding-left: 17vh;
+            font-size: 20px;
+            color: white;
+        }
+        input{
+            font-size: 16px;
+            /* margin-bottom: 2vh; */
+            width: 88%;
+            padding: 1vh;
+        
+        }
+        #button{
+            margin-left: 20vh;
+            font-size: 20px;
+            width: 58vh;
+            color: white;
+            height: 35px;
+            border: none;
+            background-color: rgba(55, 31, 141, 0.711);
+
+
+        }
+        footer p{
+            color: white;
+            text-align: center;
+            padding: 8px;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer p a:hover{
+            text-decoration: underline;
+
+        }
+
+        .one{
+            margin-bottom: 3vh;
+
+        }
+        .two{
+            margin-bottom: 3vh;
+
+        }
+        .three{
+            margin-bottom: 3vh;
+
+        }
+          i{
+            position: absolute;
+            margin-left:-6vh;
+            margin-top: 1vh;
+            font-size: 4vh;
+        }
+        main label{
+            cursor: pointer;
+        }
+        
+    </style>
+  </head>
+<body>
+<div class="container">
+    <div class="box">
+    <header class="signup"><H1>SIGNUP</H1></header>
+    <main> 
+        <form action="#">
+
+        <div class="one">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Enter your name"  id="name" required  >
+        <i id="name-icon" class="fa-solid"></i><br>
+       <span class="namerror" style="font-size: 18px;  color: rgb(77, 206, 77);"></span>
+        </div>
+
+         <div class="two">
+        <label for="email">Email</label>
+        <input type="email" placeholder="xyz@gmail.com"   id="email"  required>
+        <i id="email-icon" class="fa-solid"></i><br>
+       <span class="emailerror" style="font-size: 18px;  color: rgb(77, 206, 77);"></span>
+         </div>
+
+         <div class="three">
+        <label for="password">Password</label>
+        <input type="password" placeholder="at least 8 characters" id="password"  required min="8" max="30">
+        <i id="pass-icon" class="fa-solid"></i><br>
+       <span class="passerror" style="font-size: 18px;  color: rgb(77, 206, 77);"></span>
+        <div>
+  
+
+    </main>
+     </form>
+    <footer>
+        <input type="submit" value="Create Account" id="button">
+    <p>already have an account ?<a href=""> login</a></p></footer>
+    </div>
+</div>
+ 
+    <script src="script.js"></script>
+</body>
+
+</html>
